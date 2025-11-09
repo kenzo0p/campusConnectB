@@ -6,7 +6,11 @@
   "scripts": {
     "build": "tsc -b",
     "start": "nodemon dist/app.js",
-    "dev": "npm run build && npm run start"
+    "dev": "npm run build && npm run start",
+    "format": "prettier --write ./src",
+    "format:check": "prettier --check ./src",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +35,12 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.46.3"
   }
 }
